@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fallout Memory Game</title>
     <!-- TODO: Connect the given styles file to this HTML -->
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./js/index.js"></script>
 </head>
 <body>
     <div class="container">
@@ -29,6 +31,17 @@
             <div class="reset">
                 <button class="btn reset-btn">Reset <i class="fa fa-repeat"></i></button>
             </div>
+            <div>
+                <audio style="display: none" id="audio1" controls>
+                    <source src="./audio/win.mp3" type="audio/mpeg">
+                </audio>
+                <audio style="display: none" id="audio2" controls>
+                    <source src="./audio/lose.mp3" type="audio/mpeg">
+                </audio>
+                <audio style="display: none" id="audio3" controls>
+                    <source src="./audio/gameover.mp3" type="audio/mpeg">
+                </audio>
+            </div>
         </section>
         <!-- Modal section-->
         <table>
@@ -38,7 +51,15 @@
 
     <!-- Modal -->
     <section class="win-game-modal">
-        
+        <div class = "modal" id="modal">
+            <div class="modal-content">
+                <span id="close">&times;</span>
+                <h2>Congratulations!</h2>
+                <p>You won and found all 8 pairs of cards!</p>
+                <img class = "modal-img"src="./img/Vault-Boy-Thumb-Up.jpg" alt="thumbsup">
+                <button class ="btn play-again-btn">Play Again?</button>
+            </div>
+        </div>
     </section>
 
     <!-- TODO: Connect the given JS file to your HTML -->
